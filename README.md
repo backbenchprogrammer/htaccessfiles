@@ -1,6 +1,7 @@
 # htaccessfiles
 This project includes two custom .htaccess files to ensure the Laravel application runs correctly when deployed on servers that do not place the project directly inside the public directory. These files also add important security improvements.
 
+
 ## 1. Root .htaccess
 
 Located in the project root.
@@ -20,7 +21,7 @@ Serve existing files and folders directly when they exist.
 Why it's needed:
 Many shared hosting environments do not support custom document root settings, so this file ensures the project still functions as expected.
 
-2. Public/.htaccess
+## 2. Public/.htaccess
 
 Located inside the public directory.
 
@@ -37,14 +38,10 @@ Remove trailing slashes from URLs.
 Why it's needed:
 This file ensures that Laravel routing, API requests, and static file loading work exactly as intended.
 
-Summary
+### Summary
 
-Together, these .htaccess files:
-
-Secure the application by blocking hidden file access
-
-Ensure Laravel routes work correctly
-
-Allow the project to run normally even when a custom document root can't be set
-
-Keep storage files accessible without breaking security
+Together, these `.htaccess` files:
+-Secure the application by blocking hidden file access
+-Ensure Laravel routes work correctly
+-Allow the project to run normally even when a custom document root can't be set
+-Keep storage files accessible without breaking security
